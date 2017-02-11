@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+  {% include head.html %}
+
+  <!-- This adds page specific content to the head of that page. -->
+  {{page.head_html}}
+
+</head>
+
+<body>
+
+<div class="pure-container" data-effect="pure-effect-slide">
+
+  <!-- this is the icon and controls for the hamburger menu -->
+  <input type="checkbox" id="pure-toggle-right" class="pure-toggle" data-toggle="right">
+  <label class="pure-toggle-label mob-show" for="pure-toggle-right" data-toggle-label="right">
+    <span class="pure-toggle-icon"></span>
+  </label>
+
+  <!-- This contains the hamburger menu when it's popped out-->
+  <div class="pure-drawer" data-position="right">
+
+    {% include hamburger-nav.html %}
+
+  </div>
+
+  <div class="pure-pusher-container">
+      <div class="pure-pusher"> <!-- this contains all of the body of the site -->
+
+        {% include site-header.html %}
+
+        {{content}}
+
+        {% include site-footer.html %}
+
+      </div> <!-- end pure-pusher -->
+  </div> <!-- end pure pusher container -->
+
+  <!-- this is the overlay when you are viewing the mobile nav -->
+  <label class="pure-overlay" for="pure-toggle-right" data-overlay="right"></label>
+</div> <!-- end of page, nothing except body scipts should be below this -->
+
+{% include body-scripts.html %}
+</body>

@@ -1,0 +1,49 @@
+/* Anything that applies to only a specific page, not a reusable, modular element add here. Before you push your project live to your hosting you will merge the two files together, but the purpose of separating it now is to make it really clear to you how much of your code is reusable and how much of it is specific to certain elements or pages */
+
+/* ----------------------- BLOG ------------------------------ */
+
+.blog div {
+  background-size: cover;
+  min-height: 15em;
+  position: relative;
+}
+
+hr {
+  margin : 1em 0 2em;
+  border : 2px solid rgb(120,120,125);
+}
+
+
+.blog .date {
+  display   : block;
+  margin    : -0.6em 0 0;
+  font-size : 3.5em;
+}
+
+.blog h2 {
+  margin-top  : 0;
+  line-height : 1.3em;
+}
+
+.blog article {
+  margin : 1em 0;
+}
+
+.white-bottom .bottom, .white-left .left, .white-right .right, .white-top .top {
+    stroke: #fff;
+    fill: #fff;
+}
+
+.arrow-right {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+}
+
+.right {
+    margin-left: auto;
+    text-align: right;
+}

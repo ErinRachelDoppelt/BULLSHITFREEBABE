@@ -1,0 +1,27 @@
+---
+layout: default
+title: Blog
+---
+
+<section class="blog">
+    {% for post in site.posts %}
+    <article> <!-- Blog Excert -->
+        <a class="grid white-right" href="{{ post.url }}">
+          <div class="col-2_sm-0 border-right right mob-hide">
+              <span class="month"> {{post.month}} </span>
+              <span class="date">{{post.day}}</span>
+          </div>
+          <div class="col-5_xs-12" style="background-position:center;background-image:url('{{post.image_path}}')">
+            <svg class="arrow-right right" x="0px" y="0px"
+            	 viewBox="0 0 100 600" enable-background="new 0 0 100 600">
+                <polygon class="white" points="100,600 100,0 0,0 78,300 0,600"/>
+            </svg>
+          </div>
+          <div class="col-5_xs-12 padded">
+              <h2> {{post.title}}</h2>
+              <p> {{post.excerpt}} </p>
+          </div>
+        </a>
+    </article>
+    {% endfor %}
+</section>

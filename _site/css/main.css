@@ -1,0 +1,381 @@
+/* INDEX  --------------------
+  - CSS RESET
+  - GENERAL HELPER CLASSES
+  - UNIVERSAL STYLES
+  - HEADER & FOOTER
+  - MODULAR ELEMENTS
+    - Element Name
+  - FORMS
+
+---------------------------
+Website Fonts: List fonts here for reference
+Website Colours: List colour hex codes here for reference
+----------------------------
+*/
+
+
+
+/* ---- CSS RESET --------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%; /* This ensures an image never breaks it's container */
+}
+
+[class*=grid-][class*=-equalHeight]>[class*=col] {
+  display:block;
+  /* This overrides a quirk with gridlex where contents inside of equal height containers become columns themselves */
+}
+
+/* ---- GENERAL HELPER CLASSES --------------------------- */
+.tall         { min-height:100vh; }
+.med-height   { min-height: 50vh; }
+.short        { min-height: 30vh; }
+
+.left         { text-align: left; }
+.centered     { text-align: center; }
+.right        { text-align: right; }
+
+.no-padding { padding: 0; }
+
+.mob-show { display: none;}
+
+.full-width { /* for image grids */
+  width:100%
+}
+
+
+/* ----- UNIVERSAL STYLES --------------------------- */
+
+/* Typography */
+body {
+  font-family: 'Work Sans'; /* Make sure you have added this font in the head of your HTML! */
+  color: rgb(60,60,65);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1.1rem;
+}
+p {
+  margin-bottom: 1rem;
+}
+
+h1 { font-size: 3.0rem; line-height: 1.2; }
+h2 { font-size: 2.4rem; line-height: 1.25; }
+h3 { font-size: 3.0rem; line-height: 1.3; }
+h4 { font-size: 1.8rem; line-height: 1.35; }
+h5 { font-size: 1.7rem; line-height: 1.5; }
+h6 { font-size: 1.5rem; line-height: 1.5; }
+p  { font-size: 1.1rem; line-height: 1.5;}
+blockquote  { font-size: 1.1rem; line-height: 1.5;}
+li  { font-size: 1.1rem; }
+
+
+/* Padding & Margin */
+
+header  { padding: 0 5%; }
+footer  { padding: 2vh 5%; }
+section         { padding: 10vh 5%; }
+
+.minpaddding    { padding: 5vh 5%;  }
+
+.col,
+[class*=col-]   { padding: 2%; }
+
+
+/* Other universal styles */
+
+
+/* This is the top banner */
+.top-banner {
+  background-color: #8accff; /* featured color */
+  background-image: url('/images/Meditation.jpg');
+  background-size: cover;
+  color: white;
+  height: 100vh;
+}
+
+.top-banner h1 span {
+  display: block;
+  font-size: 1.7em;
+  margin-top: -20px;
+  margin-left: 50px;
+}
+
+/* This is the home intro section */
+.intro {
+
+}
+
+/* This is the home featured boxed section */
+.featured-boxed {
+  background: #8accff;
+}
+
+.featured-boxed .box-img {
+  padding: 0;
+  background: #8accff;
+}
+
+.featured {
+  padding: 0;
+}
+
+.fa.featured {
+  color: #8accff; /* featured color */
+  background: none;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid rgb(245,245,245);
+  margin: 3vh 0;
+}
+.previous, .next { /* This is to navigate to the previous and next page of pagination for blogs */
+    padding: 0 1.5em;
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+}
+
+/* ----- HEADER & FOOTER --------------------------- */
+nav a {
+    text-decoration: none;
+    padding: 1em;
+    color: inherit;
+}
+nav a:hover {
+  color: #8accff; /* featured color */
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.logo {
+  max-height: 2.5rem;
+  max-width: 15rem;
+  margin: 0;
+}
+header {
+  border-bottom: 1px solid rgb(245,245,245);
+}
+footer {
+  border-top: 1px solid rgb(245,245,245);
+}
+footer nav a {
+  display: block;
+  padding: 0.5em;
+}
+
+footer nav .fa,
+.social-share nav .fa {
+  padding: 0 1em 0 0;
+}
+
+.pure-drawer { /* pop-out hamburger menu */
+  padding: 5em 3%;
+}
+
+.mob-nav a {
+  display: block;
+  padding: 0.5em;
+}
+
+/* ----- MODULAR ELEMENTS --------------------------- */
+.banner {
+  background-color: #8accff; /* featured-color */
+  background-size: cover;
+  background-position: center;
+  min-height:80vh;
+}
+
+.box-img { /* This can be used for any col or div that you want filled with a background image. */
+  background-color: grey; /* this is a fallback incase the image doesn't load */
+  background-size: cover;
+  background-position: center;
+  min-height: 20vh;
+}
+
+/* Buttons */
+ button, /* button is an element snipcart uses */
+.button,
+.button-inverted {
+  background-color: #8accff; /* featured color */
+  border: none;
+  border-radius: 5px;
+  padding: 0.5em 3em;
+  margin: 1em auto;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+}
+.button-inverted {
+    border: 2px solid white;
+    color: white;
+}
+.button:hover,
+.button-inverted:hover {
+  font-weight: semi-bold;
+}
+
+/* Shop Elements */
+.product-loop a {
+  color: inherit;
+  text-decoration: none;
+  width: 100%;
+  margin: 0;
+}
+
+.product-loop .box-img {
+  min-height: 30vh;
+}
+
+.product-loop h3 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+/* Customising the snipcart pop-up */
+.snip-layout .snip-header,
+.snip-layout .snip-footer {
+  background-color:  #8accff; /* featured color */
+}
+.snip-layout .snip-footer__copyright {
+  color: white;
+}
+
+/* Blog elements */
+.blog-loop a {
+  color: inherit;
+  text-decoration: none;
+  width: 100%;
+  margin: 0;
+}
+.blog-loop img,
+.post-body img {
+    margin-bottom: 2vh;
+}
+.post-body {
+  padding-right: 3%;
+}
+
+.post-meta {
+  font-size: 0.9rem;
+}
+
+.sidebar > div {
+  border: 1px solid rgb(245,245,245);
+  padding: 2rem;
+  margin: 2vh 0;
+}
+blockquote {
+  border-left: 2px solid rgb(245,245,245);
+  margin-left: 3%;
+  padding-left: 3%;
+  font-weight: 600;
+  color: rgb(90,90,95);
+}
+/* Lists */
+ul      { list-style: circle inside; }
+ol      { list-style: decimal inside;}
+ol, ul  { padding-left: 0;
+          margin-top: 0; }
+li      { margin-bottom: 0.5rem; }
+
+/* ----- FORMS --------------------------- */
+
+input,
+textarea {
+  border-style: solid;
+  border: 1px solid grey;
+  padding: 0.8em;
+  font-family: 'Work Sans'; /* Site Font */
+  font-size: 1em;
+  display: block;
+  width: 100%;
+  margin: 1em auto;
+  vertical-align: top;
+}
+textarea {
+  min-height: 7em;
+}
+input[type="submit"] {
+  width: auto;
+  display: block;
+  background-color: #8accff; /* featured color */
+}
+
+form [class*=col-] {
+  padding: 1%;
+}
+
+/* ------------ BACKGROUND IMAGES --------------- */
+
+.erin-give-this-a-relative-name {
+  background: #eee;
+}
+
+/*------- Media Queries ------------------------*/
+@media(max-width:800px) {
+
+  /* --- General Responsive Helpers ----*/
+
+  .mob-hide {
+      display: none!important;
+  }
+  .mob-show {
+    display: block;
+  }
+
+  /* These classes flip the order of the columns on a mobile layout so that we don't have two images touching. Try commenting them out and see the difference */
+  .mob-flip {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: reverse;
+          -ms-flex-direction: column-reverse;
+              flex-direction: column-reverse;
+  }
+  .mob-flip div {
+      width: 100%; /* This fixes a flexbox bug */
+  }
+
+  /* ------ General Mobile Styles ---------*/
+  /* This aligns everything to center on mobile, this is purely slylistic, remove or adjust to suit your design */
+  body,
+  .left,
+  .right {
+    text-align: center;
+  }
+  /* This adjusts the padding on all columns, this is purely slylistic, adjust to suit your design. */
+  /* [class*=col-] is a fancy selector that selects everything class that contains col- including col-3, col-4 etc. */
+  .col,
+  [class*=col-] {
+    padding: 1rem;
+  }
+  textarea {
+    margin: 0;
+  }
+
+}/* End media query */
+
+.right .col-inner {
+  margin-right: -40%;
+  text-align: right;
+}
+
+.left .col-inner {
+  margin-left: -40%;
+  text-align: left;
+}
+
+.right-img {
+  z-index: -1;
+}
+
+.col-inner-bg {
+  background-color: white;
+  padding: 40px;
+}
