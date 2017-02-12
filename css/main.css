@@ -379,3 +379,7 @@ form [class*=col-] {
   background-color: white;
   padding: 40px;
 }
+
+element.style {
+    text-align: left;
+  }
