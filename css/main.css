@@ -59,13 +59,14 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1.1rem;
+  font-weight: normal;
 }
 p {
   margin-bottom: 1rem;
 }
 
 h1 { font-size: 3.0rem; line-height: 1.2; }
-h2 { font-size: 2.4rem; line-height: 1.25; }
+h2 { font-size: 1.4rem; line-height: 1.25; }
 h3 { font-size: 2.0rem; line-height: 1.3; }
 h4 { font-size: 1.8rem; line-height: 1.35; }
 h5 { font-size: 1.7rem; line-height: 1.5; }
@@ -93,7 +94,7 @@ section         { padding: 10vh 5%; }
 /* This is the top banner */
 .top-banner {
   background-color: #8accff; /* featured color */
-  background-image: url('/images/coverpage.jpg');
+  background-image: url('/images/coverpagee.jpg');
   background-size: cover;
   color: white;
   height: 100vh;
@@ -248,17 +249,6 @@ footer nav .fa,
   color: white;
 }
 
-/* Blog elements */
-.blog-loop a {
-  color: inherit;
-  text-decoration: none;
-  width: 100%;
-  margin: 0;
-}
-.blog-loop img,
-.post-body img {
-    margin-bottom: 2vh;
-}
 .post-body {
   padding-right: 3%;
 }
@@ -280,9 +270,9 @@ blockquote {
   color: rgb(90,90,95);
 }
 /* Lists */
-ul      { list-style: circle inside; }
-ol      { list-style: decimal inside;}
-ol, ul  { padding-left: 0;
+ul      { list-style: disc outside; }
+ol      { list-style: decimal outside;}
+ol, ul  { padding-left: 40px;
           margin-top: 0; }
 li      { margin-bottom: 0.5rem; }
 
@@ -360,6 +350,13 @@ form [class*=col-] {
   }
 
 }/* End media query */
+.no-padding-top {
+  padding-top: 0;
+}
+
+.no-padding-bottom {
+  padding-bottom: 0;
+}
 
 .right .col-inner {
   margin-right: -40%;
@@ -369,6 +366,7 @@ form [class*=col-] {
 .left .col-inner {
   margin-left: -40%;
   text-align: left;
+  position: relative;
 }
 
 .right-img {
@@ -380,6 +378,67 @@ form [class*=col-] {
   padding: 40px;
 }
 
-element.style {
-    text-align: left;
+.subscribe {
+  padding: 3%;
+  margin: 2%;
+  box-sizing: border-box;
+}
+
+.video-thumb {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+.video {
+  position: relative;
+}
+
+div.play-icon {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+    margin: -24px auto auto -34px;
+    width: 68px;
+    height: 48px;
+    background: url('/images/youtube-play-button.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.about-banner {
+  width: 100%;
+}
+
+.about-banner img {
+  background-size: cover;
+  width: 100%;
+  height: auto;
+}
+.homepgh3 {
+    background-color: #8accff;
+    text-align: center;
+    opacity: 0.7;
+    padding: 0.2em;
+    margin-top: 0.5em;
   }
+
+.bio {
+  font-style: italic;
+  background: #8accff;
+  padding: 5%;
+  margin-bottom: 10%;
+  color: #fff;
+}
+
+.bio ul {
+
+  padding-left: 20px;
+  line-height: 1.5;
+}
+
+.bio ul {
+  font-size: 10px;
+}

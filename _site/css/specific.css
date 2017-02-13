@@ -8,6 +8,15 @@
   position: relative;
 }
 
+.blog a {
+  text-decoration: none;
+  color: #333;
+}
+
+.blog a:hover {
+  color: #8accff;
+}
+
 hr {
   margin : 1em 0 2em;
   border : 2px solid rgb(120,120,125);
@@ -16,7 +25,6 @@ hr {
 
 .blog .date {
   display   : block;
-  margin    : -0.6em 0 0;
   font-size : 3.5em;
 }
 
@@ -46,4 +54,17 @@ hr {
 .right {
     margin-left: auto;
     text-align: right;
+}
+
+
+/* Blog elements */
+.blog-loop a {
+  color: inherit;
+  text-decoration: none;
+  width: 100%;
+  margin: 0;
+}
+.blog-loop img,
+.post-body img {
+  margin-bottom: 2vh;
 }
