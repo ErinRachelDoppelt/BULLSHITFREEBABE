@@ -102,12 +102,18 @@ section         { padding: 10vh 5%; }
   background-size: cover;
   color: white;
   height: 100vh;
-  width: 100%;
+  background-position: 50%;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .top-banner {
+    height: 600px;
+  }
 }
 
 @media (max-width: 768px) {
   .top-banner {
-    height: auto;
+    height: 300px;
   }
 }
 
@@ -491,4 +497,16 @@ div.play-icon {
   .col-inner-bg {
     padding: 0;
   }
+}
+
+.pure-drawer {
+  background-color: #8accff;
+}
+
+.mob-nav a:hover {
+  color: #333;
+}
+
+.pure-drawer hr {
+  border: 2px solid white;
 }
