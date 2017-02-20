@@ -31,6 +31,10 @@ img {
   /* This overrides a quirk with gridlex where contents inside of equal height containers become columns themselves */
 }
 
+[class*=grid] {
+  margin: 0;
+}
+
 /* ---- GENERAL HELPER CLASSES --------------------------- */
 .tall         { min-height:100vh; }
 .med-height   { min-height: 50vh; }
@@ -98,6 +102,13 @@ section         { padding: 10vh 5%; }
   background-size: cover;
   color: white;
   height: 100vh;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .top-banner {
+    height: auto;
+  }
 }
 
 .top-banner h1 span {
@@ -358,26 +369,6 @@ form [class*=col-] {
   padding-bottom: 0;
 }
 
-.right .col-inner {
-  margin-right: -40%;
-  text-align: right;
-}
-
-.left .col-inner {
-  margin-left: -40%;
-  text-align: left;
-  position: relative;
-}
-
-.right-img {
-  z-index: -1;
-}
-
-.col-inner-bg {
-  background-color: white;
-  padding: 40px;
-}
-
 .subscribe {
   padding: 3%;
   margin: 2%;
@@ -441,4 +432,63 @@ div.play-icon {
 
 .bio ul {
   font-size: 10px;
+}
+
+.calendar {
+  margin: 5% auto;
+  display: table;
+}
+
+.copyright {
+  margin: 1% auto;
+}
+
+.work-with-erin h4 {
+  margin-top: 5%;
+}
+
+.blog-post h1 {
+  font-size: 2em;
+  margin-top: 5%;
+}
+
+.blog-post .center {
+  text-align: center;
+  width: 100%;
+  margin-top: 5%;
+}
+
+/*This is the home page info section*/
+.right .col-inner {
+  margin-right: -40%;
+  text-align: right;
+}
+
+.left .col-inner {
+  margin-left: -40%;
+  text-align: left;
+  position: relative;
+}
+
+.right-img {
+  z-index: -1;
+}
+
+.col-inner-bg {
+  background-color: white;
+  padding: 40px;
+}
+
+@media (max-width: 1024px) {
+  .right .col-inner {
+    margin-right: 0;
+  }
+
+  .left .col-inner {
+    margin-left: 0;
+  }
+
+  .col-inner-bg {
+    padding: 0;
+  }
 }
